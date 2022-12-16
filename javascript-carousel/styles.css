@@ -1,0 +1,21 @@
+.carousel-box {
+  display: flex;
+  justify-content: center;
+}
+
+.img-indicator {
+  display: flex;
+  justify-content: space-between;
+  width: 160px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.dot .nonactive {
+
+}
