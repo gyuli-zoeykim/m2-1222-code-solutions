@@ -7,6 +7,6 @@ var countmsg = setInterval(function() {
   countdown.innerHTML = msg;
   if (msg === 0) {
     clearInterval(countmsg);
-    countdown.innerHTML = '~Earth Beeeelooowww Us~'
+    countdown.textContent = '~Earth Beeeelooowww Us~'
   }
 }, 1000);
