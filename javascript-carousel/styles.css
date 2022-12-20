@@ -1,21 +1,53 @@
 .carousel-box {
+  height: 600px;
+}
+
+.carousel-inner {
   display: flex;
   justify-content: center;
 }
 
 .img-indicator {
-  display: flex;
-  justify-content: space-between;
-  width: 160px;
+  margin: auto;
+  width: 180px;
 }
 
-.dot {
+.indicator-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background-color: black;
+  list-style-type: none;
 }
 
-.dot .nonactive {
+li .active {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
 
+.arrow {
+  position: relative;
+  bottom: 200px;
+}
+
+i:first-child {
+  position: relative;
+  left: 50px;
+}
+
+i:last-child {
+  float: right;
+  position: relative;
+  right: 50px;
+}
+
+img .inactive {
+  display: hidden;
 }
