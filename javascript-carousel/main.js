@@ -33,3 +33,18 @@ $indicator.addEventListener('click', function (event) {
   var indicatorNumber = event.target.closest('li').getAttribute('id');
   return pokemonImg.setAttribute('src', imgArray[indicatorNumber - 1]);
 });
+
+var imgCount = 0;
+var carouselImg = setInterval(function () {
+  for (var i = 0; i <= imgArray.length; i++) {
+    if (pokemonImg.getAttribute('src') === imgArray[i]) {
+      return pokemonImg.setAttribute('src', imgArray[i++]);
+    } else if (i === imgArray.length) {
+      imgCount = 0;
+      return pokemonImg.setAttribute('src', imgArray[imgCount]);
+    }
+  }
+  imgCount++;
+}, 3000);
+
+carouselImg();
