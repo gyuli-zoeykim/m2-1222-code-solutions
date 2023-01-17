@@ -1,0 +1,191 @@
+    1  http https://example.com
+    2  git pull origin main
+    3  git branch --list
+    4  git branch http-messages
+    5  git branch --list
+    6  git switch http-messages
+    7  http https://example.com
+    8  http --verbose https://example.com
+    9  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/user.json
+   10  http --body GET https://example.com > http-messages/index.html
+   11  git status
+   12  git add -A
+   13  git status
+   14  git commit -m "Completed http-messages"
+   15  git push origin http-messages
+   16  git switch main
+   17  git pull origin main
+   18  git branch javascript-ajax
+   19  git branch --list
+   20  git switch javascript-ajax
+   21  git status
+   22  git add -A
+   23  git status
+   24  git commit -m "Completed javascript-ajax"
+   25  git push origin javascript-ajax
+   26  git switch main
+   27  git pull origin main
+   28  git switch javascript-carousel
+   29  git add -A
+   30  git status
+   31  git commit -m "save for future edit"
+   32  git add -A
+   33  git status
+   34  git commit -m "save for future edit"
+   35  git switch main
+   36  git pull origin main
+   37  git switch main
+   38  git add -A
+   39  git status
+   40  git commit -m "save for future edit"
+   41  git add -A
+   42  git status
+   43  git commit -m "save for future edit"
+   44  git switch main
+   45  git pull origin main
+   46  git switch javascript-carousel
+   47  git switch main
+   48  git switch javascript-timers
+   49  git branch javascript-timers
+   50  javascript -d javascript timers
+   51  git -d javascript-timers
+   52  git branch --list
+   53  git push origin javascript-timers
+   54  git switch bank
+   55  git switch javascript-bank
+   56  git switch javascript-bank
+   57  git add -A
+   58  git status
+   59  git add -A
+   60  git status
+   61  git commit -m "remove console log"
+   62  git push origin javascript-timers
+   63  git switch main
+   64  git pull origin main
+   65  git switch javascript-carousel
+   66  git switch main
+   67  git pull origin main
+   68  git switch javascript-carousel
+   69  git branch --list
+   70  git commit -m "working on carousel"
+   71  git add -A
+   72  git status
+   73  git commit -m "work in process for carousel"
+   74  git switch main
+   75  git add -A
+   76  git status
+   77  git commit -m "work in process for carousel"
+   78  git push origin javascript-carousel
+   79  git switch main
+   80  git pull origin main
+   81  git branch es6-const-let
+   82  git branch --list
+   83  git switch es6-const-let
+   84  git add es6-const-let
+   85  git status
+   86  git commit -m "Completed es6-const-let"
+   87  git push origin es6-const-let
+   88  git switch main
+   89  git pull origin main
+   90  git branch es6-template-literals
+   91  git branch --list
+   92  git switch es6-template-literals
+   93  git add est-template-literals
+   94  git add es6-template-literals
+   95  git status
+   96  git commit -m "Completed es6-template-literals"
+   97  git push origin es6-template-literals
+   98  git switch main
+   99  git config --global user.email "gyulikimwork@gmail.com"
+  100  git config --global user.email
+  101  git pull origin main
+  102  git pull origin main
+  103  git branch es6-destructuring
+  104  git branch --list
+  105  git branch --list
+  106  git switch es6-destructuring
+  107  git status
+  108  git add es6-destructuring
+  109  git status
+  110  git commit -m "Completed es6-destructuring"
+  111  git push origin es6-destructuring
+  112  git switch main
+  113  git pull origin main
+  114  git branch es6-arrow-functions
+  115  git branch --list
+  116  git switch es6-arrow-functions
+  117  git add es6-arrow-functionsj
+  118  git add es6-arrow-functions
+  119  git status
+  120  git commit -m "Completed es6-arrow-functions"
+  121  git push origin es6-arrow-functions
+  122  git switch main
+  123  git branch command-line-basics
+  124  git branch --list
+  125  git switch command-line-basics
+  126  cd command-line-basics
+  127  man man
+  128  man cat
+  129  cat laziness.txt
+  130  cat impatience.txt
+  131  cat hubris.txt
+  132  man cat
+  133  cat laziness.txt impatience.txt hubris.txt
+  134  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  135  cat three-virtues.txt
+  136  man ls
+  137  ls
+  138  ls -a
+  139  ls -F
+  140  man ls
+  141  mas ls
+  142  man ls
+  143  ls lfz-staff/
+  144  ls -a lfz-staff/
+  145  ls -F lfz-staff/
+  146  ls -aF lfz-staff > lfz-staff/contents.txt
+  147  ls -aF lfz-staff > lfz-staff/contents.txt
+  148  ls -aF lfz-staff/ > lfz-staff/contents.txt
+  149  ls -aF lfz-staff > lfz-staff/contents.txt
+  150  cat lfz-staff/contents.txt
+  151  man pwd
+  152  pwd
+  153  pwd > i-was-here.txt
+  154  ls
+  155  cat i-was-here.txt
+  156  man echo
+  157  echo 'Hello, World!'
+  158  echo 'Hello, World!' > hello.txt
+  159  ls
+  160  cat hello.txt
+  161  man touch
+  162  touch tag-youre-it.txt
+  163  touch snoot/boop.txt
+  164  ls
+  165  ls snoot/
+  166  man mkdir
+  167  mkdir parent
+  168  ls parent/
+  169  ls
+  170  mkdir -p parent/child/grandchild
+  171  touch parent/child/grandchild/.gitkeep
+  172  ls -a
+  173  touch parent/child/grandchild/.gitkeep
+  174  ls -a
+  175  man mv
+  176  mv
+  177  man mv
+  178  mv pokiemans pokemon
+  179  ls
+  180  man rm
+  181  rm lol.txt
+  182  ls
+  183  rm -r kill-me/
+  184  ls
+  185  man cp
+  186  cp and-then.txt no-and-then.txt
+  187  ls
+  188  cat and-then.txt no-and-then.txt
+  189  man history
+  190  history
+  191  history > command-history.txt
