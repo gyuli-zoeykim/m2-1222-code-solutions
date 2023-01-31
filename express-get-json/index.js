@@ -21,8 +21,8 @@ var grades = {
   }
 };
 
-var arry = [];
 app.get('/api/grades', (req, res) => {
+  var arry = [];
   for (const property in grades) {
     var test = grades[property];
     arry.push(test);
