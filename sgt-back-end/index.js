@@ -9,6 +9,8 @@ const db = new pg.Pool({
   }
 });
 
+app.use(express.json());
+
 app.get('/api/grades', (req, res, next) => {
   const sql = `
     select *
@@ -28,13 +30,11 @@ app.get('/api/grades', (req, res, next) => {
     });
 });
 
-app.use(express.json());
-
 app.post('/api/grades', (req, res, next) => {
-
   const titleGrade = 'INSERT INTO grades(name, course, score) VALUES($1, $2, $3) RETURNING *';
   const valueGrade = [req.body.name, req.body.course, req.body.score];
-  if (!valueGrade.includes(req.body.name, req.body.course, req.body.score) || Number(req.body.score) < 0 || Number(req.body.score) > 100) {
+  if (valueGrade.includes(undefined, null) ||
+  Number(req.body.score) < 0 || Number(req.body.score) > 100) {
     res.status(400).json({
       error: 'input is missing or invalid.'
     });
@@ -55,8 +55,9 @@ app.post('/api/grades', (req, res, next) => {
 
 app.put('/api/grades/:gradeId', (req, res, next) => {
   const gradeId = Number(req.params.gradeId);
-  const update = [req.body.name, req.body.course, req.body.score, gradeId];
-  if (!Number.isInteger(gradeId) || gradeId <= 0 || !update.includes(req.body.name, req.body.course, req.body.score) || Number(req.body.score) < 0 || Number(req.body.score) > 100) {
+  const update = [gradeId, req.body.name, req.body.course, req.body.score];
+  if (!Number.isInteger(gradeId) || gradeId <= 0 || update.includes(undefined, null) ||
+  Number(req.body.score) < 0 || Number(req.body.score) > 100) {
     res.status(400).json({
       error: 'input is missing or invalid.'
     });
@@ -65,10 +66,11 @@ app.put('/api/grades/:gradeId', (req, res, next) => {
 
   const sql = `
     update "grades"
-    set  "name" = $1,
-           "course"= $2,
-           "score" = $3
-     where "gradeId" = $4
+    set  "name" = $2,
+           "course"= $3,
+           "score" = $4
+     where "gradeId" = $1
+     returning *
   `;
 
   db.query(sql, update)
@@ -112,8 +114,9 @@ app.delete('/api/grades/:gradeId', (req, res, next) => {
         res.status(404).json({
           error: `Cannot find grade with 'gradeId' ${gradeId}`
         });
+      } else {
+        res.status(204).json({});
       }
-      res.status(204).json('Grade successfully deleted.');
     })
     .catch(err => {
       console.error(err);
